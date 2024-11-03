@@ -1,0 +1,26 @@
+{
+  "name": "@repo/db",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    "./client": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "prisma generate && tsc -b",
+    "generate": "prisma generate",
+    "seed": "ts-node seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "6.5.0",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "*",
+    "@types/node": "^20.11.0",
+    "prisma": "6.5.0",
+    "typescript": "^5.5.4"
+  }
+}

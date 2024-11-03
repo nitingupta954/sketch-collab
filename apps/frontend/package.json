@@ -1,0 +1,42 @@
+{
+  "name": "exceldraw-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 8000",
+    "build": "next build",
+    "start": "next start -p 8000",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "6.5.0",
+    "@repo/backend-common": "*",
+    "@repo/common": "*",
+    "@repo/db": "*",
+    "@tanstack/react-query": "^5.101.2",
+    "axios": "^1.7.9",
+    "bcryptjs": "^3.0.3",
+    "framer-motion": "^12.23.24",
+    "js-cookie": "^3.0.5",
+    "jsonwebtoken": "^9.0.3",
+    "lucide-react": "^0.474.0",
+    "next": "15.1.12",
+    "prism-react-renderer": "^2.4.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.2",
+    "react-router-dom": "^7.4.0",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/js-cookie": "^3.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

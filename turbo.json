@@ -1,0 +1,30 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**",
+        "dist/**"
+      ]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "check-types": {
+      "dependsOn": ["^check-types"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  },
+  "globalEnv": ["DATABASE_URL", "JWT_SECRET", "ENABLE_EXPERIMENTAL_COREPACK", "NEXT_PUBLIC_WS_URL"],
+  "globalDependencies": [
+    "db/prisma/schema.prisma",
+    "tsconfig.json"
+  ]
+}
