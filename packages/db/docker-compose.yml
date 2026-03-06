@@ -6,9 +6,9 @@ services:
     container_name: draw_app_postgres
     restart: always
     environment:
-      POSTGRES_USER: postgres
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
-      POSTGRES_DB: SketchCollab
+      POSTGRES_DB: ${POSTGRES_DB:-SketchCollab}
     ports:
       - "5434:5432"
     volumes:
